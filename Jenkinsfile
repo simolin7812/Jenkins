@@ -16,10 +16,11 @@ pipeline {
 
     stage('Build WAR') {
       steps {
-        
+        dir('login-app'){
           sh 'mvn -B clean package -DskipTests'
           stash includes: 'target/*.war', name: 'war'
-              }
+        }
+        }
       post {
         success {
           archiveArtifacts artifacts: 'login-app/target/*.war', fingerprint: true
