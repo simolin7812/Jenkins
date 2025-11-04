@@ -6,8 +6,8 @@ pipeline {
   }
   environment {
     APP_NAME   = 'login-app'                       // WAR 이름 & context path
-    TOMCAT_URL = 'http://192.168.0.10:80'    // Tomcat 접근 URL
-    CRED_ID    = 'Tomcat-Deployer'             // Jenkins 크리덴셜 ID
+    TOMCAT_URL = 'http://192.168.0.193:80'    // Tomcat 접근 URL
+    CRED_ID    = 'tomcat-deployer'             // Jenkins 크리덴셜 ID
     USE_WRAPPER = 'true'                            // 'true'면 ./mvnw 사용
   }
   options {
